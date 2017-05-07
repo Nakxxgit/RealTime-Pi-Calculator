@@ -14,4 +14,3 @@ while True:
         with open('filename','w') as f:
             f.write(str(quarterpi*Decimal(4)))
     n += 1
-f.close
