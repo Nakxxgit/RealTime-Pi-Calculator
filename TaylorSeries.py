@@ -7,12 +7,11 @@ getcontext().prec = 1000
 quarterpi = Decimal(0)
 n = 0
 
-
 while True:
     quarterpi = quarterpi + Decimal(-1)**n / (Decimal(2*n + 1))
     if (n % 10000 == 0):
         print(quarterpi*Decimal(4))
-        f = open("PI_SAVE", 'w')
-        f.write(str(quarterpi*Decimal(4)))
-        f.close()
+        with open('filename','w') as f:
+            f.write(str(quarterpi*Decimal(4)))
     n += 1
+f.close
