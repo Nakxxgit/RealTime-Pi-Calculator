@@ -7,13 +7,13 @@ getcontext().prec = 10
 app = Flask(__name__)
 
 def getPI():
-		while True:
-			time.sleep(10)
-			f = open('PI_SAVE', 'r')
-			savedPI = f.read()
-			f.close()
-			yield str(savedPI + '\n')
-
+	while True:
+		time.sleep(10)
+		f = open('PI_SAVE', 'r')
+		savedPI = f.read()
+		f.close()
+		yield str(savedPI + '\n')
+			
 @app.route('/')
 def sse_request():
 	return Response(
